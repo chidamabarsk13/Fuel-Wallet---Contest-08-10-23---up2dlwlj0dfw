@@ -1,3 +1,5 @@
+import {v4 as uuidv4} from "uuid";
+
 const reducer=(state, action) => {
   switch(action.type){
       case"add";
@@ -5,6 +7,7 @@ const reducer=(state, action) => {
         id: uuidv4(),
         name: action.name,
       };
+      action.setBalance(action.balance + 10);
       return[...state, newUser];
 
     case "fuel";
