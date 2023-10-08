@@ -4,6 +4,7 @@ import AddUser from "./AddUser";
 import Users from "./Users";
 import Wallet from "./Wallet";
 import reducer from "../reducers";
+import {v4 as uuidv4} from "uuid";
 const App = () => {
     console.log("here");
     const [balance, setBalance] = useState(0);
