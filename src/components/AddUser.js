@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import {v4 as uuidv4}from "uuid";
 
 function AddUser({ dispatch, setBalance, balance }) {
     const [name, setName] = useState("");
 
     function handleClick(e) {
         e.preventDefault();
-        // dispatch({ type: "add", name, setBalance, balance });
+         dispatch({ type: "add", name, setBalance, balance });
         setName("");
     }
 
